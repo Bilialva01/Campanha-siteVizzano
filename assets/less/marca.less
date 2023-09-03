@@ -1,0 +1,135 @@
+#marca {
+	background: #FFF;
+	
+	.brand-container {
+		margin-top: -2px;
+		width: 100%;
+		position: relative;
+
+		.brand-img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			object-fit: cover;
+			display: none;
+			
+			.mediaMD({
+				display: block;
+				width: 40%;
+			});
+			
+			.mediaLG({
+				width: 50%;
+			});
+		}
+
+		.brand-content {
+			display: flex;
+			justify-content: flex-start;
+			align-content: center;
+			flex-wrap: wrap;
+			width: 100%;
+			color: #020202;
+			text-align: left;
+			box-sizing: border-box;
+			min-height: calc(100vh - 120px - 100px);
+			padding: 50px 30px;
+			
+			@media only screen and (min-width: 681px) and (max-width: 768px) {
+				padding-top: 150px;
+			}
+
+			.mediaMD({
+				height: 100%;
+				margin-left: 40%;
+				width: 60%;
+				max-width: 585px;
+				padding: 70px 50px;
+			});
+			
+			.mediaLG({
+				margin-left: 50%;
+				width: 50%;
+				padding: 70px;
+			});
+
+			.mainTit {
+				.titulo(40px);
+				width: 100%;
+				display: block;
+				color: inherit;
+				padding: 0;
+				letter-spacing: 20px;
+				margin-bottom: 20px;
+
+				.mediaMD({
+					font-size: 50px;
+					margin-bottom: 40px;
+				});
+
+				.mediaLG({
+					font-size: 60px;
+				});
+				
+				.mediaLaptop({
+					letter-spacing: 32px;
+				});
+			}
+
+			.brand-text {
+				.texto(14px, 24px, 300);
+				width: 100%;
+				display: block;
+				color: inherit;
+				margin-bottom: 60px;
+
+				.mediaMD({
+					margin-bottom: 80px;
+				});
+			}
+
+			.brand-links {
+				width: 100%;
+				margin-bottom: 60px;
+				white-space: nowrap;
+				font-size: 0;
+
+				.-btn {
+					width: 50%;
+					margin: 0;
+					display: inline-block;
+					text-align: center;
+					border: none;
+					line-height: 60px;
+					
+					.mediaSM({
+						font-size: 20px;
+						letter-spacing: 10px;
+					});
+					
+					.mediaLarge({
+						font-size: 24px;
+						line-height: 80px;
+					});
+
+					&:last-child {
+						margin-left: 1px;
+					}
+				}
+			}
+
+			.brand-social {
+				color: inherit;
+
+				a:not(:last-child) {
+					margin-right: 35px;
+				}
+
+				a, i {
+					color: inherit;
+				}
+			}
+		}
+	}
+}

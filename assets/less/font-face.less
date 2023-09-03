@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'Helvetica LT Std Comp';
+    src: url('../fontes/HelveticaLTStd-Comp.woff2') format('woff2'),
+        url('../fontes/HelveticaLTStd-Comp.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica LT Std';
+    src: url('../fontes/HelveticaLTStd-LightCond.woff2') format('woff2'),
+        url('../fontes/HelveticaLTStd-LightCond.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+.texto(@size: 1.4em, @lineHeight: 140%, @weight: 300) {
+    font: @size 'Helvetica LT Std';
+    font-weight: @weight;
+    line-height: @lineHeight;
+}
+
+.titulo(@size: 4.0em, @lineHeight: 100%) {
+    font: @size 'Helvetica LT Std Comp';
+    //font-weight: bold;
+    line-height: @lineHeight;
+    letter-spacing: 0.4em;
+}

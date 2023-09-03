@@ -1,0 +1,91 @@
+#campanha {
+	
+	.main {padding: 0 0 264px 0;}
+	.mainTit {padding: 83px 0 62px 0;}
+
+	.boxVideo {
+		position: relative;
+		height: 600px;
+		overflow: hidden;
+
+		.border {
+			position: absolute;
+			left: 20px;
+			top: 20px;
+			right: 20px;
+			bottom: 20px;
+			z-index: 2;
+			border: 2px solid #FFF;
+		}
+
+		a,
+		img {height: 100%;}
+	
+		img {
+			display: block;
+			position: relative;
+			left: 50%;
+			.translate(-50%, 0);
+		}
+
+		iframe {
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 5;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	//Fotos
+	.boxFotos {
+		padding-bottom: 80px;
+	}
+
+	.slickFotos {
+		display: inline-block;
+		width: 90%;
+		margin-top: -94px;
+		&.hasHover a:hover {
+			img {.opacity(.4);}
+			.caption {.opacity(10);}
+		}
+
+		.item {
+			position: relative;
+			display: inline-block;
+			width: 32%;
+			margin: 0 10px;
+			background: #000;
+		}
+
+		.caption,
+		img {.transition;}
+
+		.caption {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			.translate(-50%, -50%);
+			padding: 19px 36px 17px;
+			border: 2px solid #FFF;
+			color: #FFF;
+			text-transform: uppercase;
+			.titulo(1.6em);
+			.opacity;
+		}
+
+		.slick-prev,
+		.slick-next {
+			background: url(../img/arrow-slick2.png) no-repeat 0 0;
+		}
+
+		.slick-dots {
+			display: none !important;
+			
+			li.slick-active button {background-color: #FFF !important;}
+			button {border: 1px solid #FFF;}
+		}
+	}
+}

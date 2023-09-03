@@ -1,0 +1,360 @@
+#produto {
+	background: #FFF;
+
+	.mainProduto {
+		padding-bottom: 178px;
+	}
+
+	.mainImg {
+		width: 59%;
+
+		img {
+			display: block;
+			position: relative;
+			left: 50%;
+			.translate(-50%, 0);
+			max-width: 90%;
+			max-height: 90%;
+		}
+	}
+	
+	.sideInfos {
+		width: 37%;
+
+		.titProduto {
+			.texto(2.4em, 100%);
+			text-transform: uppercase;
+			color: @main_color;
+			padding-bottom: 35px;
+
+			span {
+				font-size: 75%;
+				padding-top: 5px;
+			}
+		}
+
+		.txtCores {
+			padding-bottom: 11px;
+			color: @main_color;
+			.titulo(1.4em);
+			text-transform: uppercase;
+		}
+
+		.btn {
+			border-color: @main_color;
+			outline: 2px solid @main_color;
+			outline-offset: -6px;
+			&:hover {outline-color: @txt_color; background: @main_color;}
+			font-size: 1.4em;
+		}
+	}
+
+	.thumbs {
+		display: inline-block;
+		width: 320px;
+		max-width: 100%;
+		margin-bottom: 80px;
+
+		.item {
+			float: left;
+			width: 103px;
+			height: 103px;
+			margin-right: 4px;
+		}
+
+		.lkThumb, .lkThumbCombine {
+			height: 100%;
+			box-sizing: border-box;
+			border: 2px solid @main_color;
+			.transition;
+		}
+		
+		img {
+			display: block;
+			position: relative;
+			left: 50%;
+			top: 50%;
+			.translate(-50%, -50%);
+			max-width: 90%;
+			max-height: 90%;
+		}
+
+		.slick-dots {display: none !important;}
+	}
+
+	//Combinação
+	.combinacao {
+		.txt { color: #000; }
+	}
+
+	//Produtos relacionados
+	.produtosRelacionados {
+		padding-bottom: 124px;
+
+		header {
+			height: 2px;
+			margin-bottom: 63px;
+			background: @main_color;
+
+			.tit {
+				display: inline-block;
+				font-size: 1.8em;
+				margin-top: -10px;
+				padding: 0 30px;
+				background: #FFF;
+			}
+		}
+
+		.listaProdutos {
+			display: inline-block;
+			width: 990px;
+			max-width: 100%;
+
+			.item {
+				width: 25%;
+				height: 244px;
+				&:nth-child(3n+3) {margin-right: 2px;}
+			}
+
+			.txtHover {font-size: 1.6em;}
+
+			.slick-prev {left: -55px;}
+			.slick-next {right: -55px;}
+
+			.slick-dots {display: none !important;}
+		}
+	}
+
+	//Encontre
+	.boxEncontre {
+		padding: 49px 0;
+		background: #ebebeb;
+		&.hasHover a:hover {
+			img {.opacity(.2);}
+			.overlay {.opacity;}
+			
+			figcaption {
+				border-color: #FFF;
+				span {color: #FFF !important;}
+			}
+		}
+
+		a {
+			position: relative;
+			width: 49%;			
+		}
+
+		figure {background: @main_color;}
+
+		figcaption {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			.translate(-50%, -50%);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 80px;
+			padding: 0 50px;
+			box-sizing: border-box;
+			border: 2px solid transparent;
+
+			span {
+				position: relative;
+				z-index: 5;
+				font-size: 1.9em;
+				white-space: nowrap;
+			}			
+		}
+
+		.overlay {
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			background: #FFF;
+			.opacity(.8);
+		}
+
+		img,
+		figcaption span,
+		.overlay {.transition;}
+	}
+
+	.subtit {
+		display: inline-block;
+		padding: 90px 0 50px;
+		font-size: 4em;
+	}
+
+
+	.lojasOnline,
+	.lojasFisicas {padding-bottom: 107px;}
+
+	.listaLojas {
+		height: auto;
+		
+		.item {
+			float: left;
+			width: 19%;
+			height: 213px;
+			margin: 0 5px 10px;
+			box-sizing: border-box;
+			border: 1px solid #ccc;
+			&:nth-child(5n+5) {margin-right: 0;}
+		}
+		
+		a {
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+
+		img {
+			display: block;
+			position: relative;
+			left: 50%;
+			top: 50%;
+			.translate(-50%, -50%);
+			max-width: 90%;
+			max-height: 90%;
+		}
+	}
+
+	
+	.avisoLojista, .sobreModelo {
+		.texto(1.5em);
+		color: @main_color;
+		span {
+			display: block;
+			padding-top: 5px;
+			&.cor {color: #9a9a98;}
+		}
+	}
+	
+	.sobreModelo {margin-bottom: 35px;}
+	.avisoLojista {margin-top: 45px;}
+
+	#formEncontrar {
+		padding-bottom: 41px;
+
+		.column {
+			margin-right: 5px;
+			&:last-child {margin-right: 0;}
+			&.col-30 {width: 26%;}
+		}
+
+		select {
+			border-color: @main_color;
+			text-transform: uppercase;
+		}
+
+		.submit {
+			width: 100%;
+			border: 1px solid @main_color;
+		}
+	}
+
+	.resultLojas {
+
+		.item {
+			float: left;
+			width: 49%;
+			height: 229px;
+			text-align: left;
+			margin: 0 4px 8px;
+			border: 1px solid #ebebeb;
+			&:nth-child(2n+2) {margin-right: 0;}
+		}
+
+		.nomeLoja {			
+			height: 60px;
+			margin-bottom: 22px;
+			background: #ebebeb;
+
+			span {
+				display: block;
+				position: relative;
+				top: 50%;
+				.translate(0, -50%);
+				padding: 5px 24px 0;
+				font-size: 1.6em;
+				&.tit {
+					color: #9a9a98;
+				}
+			}
+		}
+
+		article {padding: 0 24px;}
+
+		p {
+			position: relative;
+			.texto;
+			color: @main_color;
+			padding-bottom: 8px;
+
+			strong,
+			span {.titulo(100%);}
+		
+			span {
+				display: inline-block;
+				margin: 0 8px 10px;
+			}
+		}
+
+		.morePhones {
+			width: 337px;
+			max-width: 100%;
+		}
+
+		.lkMorePhones {
+			position: absolute;
+			top: -3px;
+			right: -30px;
+			width: 20px;
+			height: 20px;
+			box-sizing: border-box;
+			border: 2px solid @main_color;
+			background: @main_color;
+			.transition;
+			&:hover {
+				i {background: @main_color;}
+				background: #FFF;
+			}
+
+			&.disabled {
+				cursor: default;
+				border-color: #a1a1a1;
+				background: #a1a1a1;
+				&:hover i {background: #FFF;}
+			}
+
+			&.active {
+				background: #FFF;
+				i {
+					background: @main_color;
+					&.vert {.opacity;}
+				}
+			}
+		
+			i {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				background: #FFF;
+				.translate(-50%, -50%);
+
+				&.vert {
+					width: 2px;
+					height: 6px;
+				}
+
+				&.horiz {
+					width: 6px;
+					height: 2px;
+				}
+			}
+		}
+	}
+}

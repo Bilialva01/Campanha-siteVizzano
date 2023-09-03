@@ -1,0 +1,270 @@
+#encontre {
+	background: #FFF;
+
+	.main {margin-bottom: 77px;}
+
+	.mainTit {
+		padding: 0 0 80px 0;
+		font-size: 4em;
+	}
+
+	.navLojas {
+		width: 100%;
+		max-width: 965px;
+		padding: 0 30px;
+		box-sizing: border-box;
+		font-size: 0;
+		margin: 0 auto;
+		padding-bottom: 90px;
+
+		.-btn {
+			display: block;
+			width: 100%;
+			margin-bottom: 10px;
+			
+			.mediaMD({
+				display: inline-block;
+				width: calc(33.333% - 2px);
+				margin: 0 1px;
+			});
+		}
+	}
+
+	.subtit {
+		font-size: 4em;
+		padding-bottom: 47px;
+	}
+
+	#lojas-fisicas,
+	#lojas-online {padding-bottom: 100px;}
+
+	//lojas Online
+	.listaLojas {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		.item {
+			width: 19%;
+			height: 213px;
+			margin: 0 5px 10px;
+			box-sizing: border-box;
+			border: 1px solid #ccc;
+		}
+
+		a {
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+
+		img {
+			display: block;
+			position: relative;
+			left: 50%;
+			top: 50%;
+			.translate(-50%, -50%);
+			max-width: 90%;
+			max-height: 90%;
+		}
+	}
+
+
+	//Lojas físicas
+	#formEncontrar {
+		padding-bottom: 41px;
+
+		.column {
+			margin-right: 5px;
+			&:last-child {margin-right: 0;}
+			&.col-30 {width: 26.3%;}
+		}
+
+		select {
+			border-color: @main_color;
+			text-transform: uppercase;
+		}
+
+		.submit {
+			width: 100%;
+			border: 1px solid @main_color;
+		}
+	}
+
+	.resultLojas {
+
+		.item {
+			float: left;
+			width: 49%;
+			height: 229px;
+			text-align: left;
+			margin: 0 4px 8px;
+			border: 1px solid #ebebeb;
+			&:nth-child(2n+2) {margin-right: 0;}
+		}
+
+		.nomeLoja {			
+			height: 60px;
+			margin-bottom: 22px;
+			background: #ebebeb;
+
+			span {
+				display: block;
+				position: relative;
+				top: 50%;
+				.translate(0, -50%);
+				padding: 5px 24px 0;
+				font-size: 1.6em;
+				&.tit {
+					color: #9a9a98;
+				}
+			}
+		}
+
+		article {padding: 0 24px;}
+
+		p {
+			position: relative;
+			.texto;
+			color: @main_color;
+			padding-bottom: 8px;
+
+			strong,
+			span {.texto(100%);}
+		
+			span {
+				display: inline-block;
+				margin: 0 8px 10px;
+			}
+		}
+
+		.morePhones {
+			width: 337px;
+			max-width: 100%;
+		}
+
+		.lkMorePhones {
+			position: absolute;
+			top: -3px;
+			right: -30px;
+			width: 20px;
+			height: 20px;
+			box-sizing: border-box;
+			border: 2px solid @main_color;
+			background: @main_color;
+			.transition;
+			&:hover {
+				i {background: @main_color;}
+				background: #FFF;
+			}
+
+			&.disabled {
+				cursor: default;
+				border-color: #a1a1a1;
+				background: #a1a1a1;
+				&:hover i {background: #FFF;}
+			}
+
+			&.active {
+				background: #FFF;
+				i {
+					background: @main_color;
+					&.vert {.opacity;}
+				}
+			}
+		
+			i {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				background: #FFF;
+				.translate(-50%, -50%);
+
+				&.vert {
+					width: 2px;
+					height: 6px;
+				}
+
+				&.horiz {
+					width: 6px;
+					height: 2px;
+				}
+			}
+		}
+	}
+
+
+	//Showrooms
+	.boxShowrooms {
+
+		.mapShowroons {
+			width: 100%;
+			height: 600px;	
+		}
+		
+		#map_canvas {
+			width: 100%;
+			height: 100%;
+		}
+
+		//Box Infos
+		.gm-style-iw {width: 100%;}
+
+		//.infoBox { 
+		.gm-style-iw-d {
+			//padding: 10px 20px;
+			border: 1px solid #CCC; 
+			background: #FFF; 
+
+			span,
+			h2 {
+				.titulo(15px, 130%);
+				color: #000;
+				letter-spacing: 0.01em;
+			}
+			
+			span {
+				display: block;
+				.texto(14px);
+				letter-spacing: 0.01em;
+			}
+
+			img {
+				position: absolute !important;
+				top: 5px;
+				right: 5px;
+			}
+		}	
+	}
+
+	//Slider showroom (mobile)
+	.listShowrooms {
+		display: none;
+		width: 600px;
+		max-width: 100%;
+		padding-bottom: 55px;
+
+		article {
+			display: inline-block;
+			width: 47%;
+			//max-height: 135px;
+			margin: 0 5px 25px 5px;
+			margin-bottom: 30px;
+			border-bottom: 1px solid #fff;
+			vertical-align: top;
+		}
+
+		a, p {
+			color: #000;
+			.titulo(1.4em, 130%);
+		}
+
+		a {
+			font-size: 130%;
+			text-decoration: none;
+		}
+
+		.slick-prev,
+		.slick-next {display: none !important;}
+	}
+}

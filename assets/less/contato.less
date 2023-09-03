@@ -1,0 +1,301 @@
+#contato {
+	background: #ebebeb;
+
+	.-btn {
+		width: 100%;
+	}
+
+	.main {
+		padding: 0;
+		margin-top: -2px;
+
+		.mainTit {
+			padding: 0;
+		}
+	}
+
+	.contact-container {
+		position: relative;
+
+		.contact-content {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			width: 100%;
+			box-sizing: border-box;
+			padding: 60px 30px;
+
+			@media only screen and (min-width: 681px) {
+				padding: 120px 30px 60px;
+			}
+
+			.mainTit {
+				margin-bottom: 20px;
+			}
+
+			@media only screen and (min-width: 1024px) {
+				width: 50%;
+				min-height: 400px;
+				padding: 120px 30px;
+			}
+
+			.titAtendimento {
+				.titulo(14px, 24px)
+			}
+
+			.navAtendimento {
+				margin: 55px 0 50px;
+				width: 300px;
+			}
+
+			.sec-box {
+				width: 300px;
+				background: #000;
+				padding: 50px;
+				box-sizing: border-box;
+
+				h4 {
+					color: #fff;
+					margin-bottom: 20px;
+
+					.texto(14px, 18px);
+
+					strong {
+						width: 100%;
+						display: block;
+						margin-bottom: 10px;
+						.titulo(40px, 30px);
+						letter-spacing: 16px;
+					}
+				}
+			}
+
+			.infosBottom {
+				width: 100%;
+				display: flex;
+				margin-top: 45px;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+
+				a, .sep {
+					color: #000;
+					.titulo(16px);
+				}
+				
+				a {
+					letter-spacing: 2px;
+					text-transform: uppercase;
+
+					&:hover {
+						text-decoration: underline;
+					}
+
+					&:not(:last-child) {
+						margin-bottom: 25px;
+					}
+				}
+
+				.sep {
+					display: none;
+					margin: 0 6px;
+				}
+
+				@media only screen and (min-width: 640px) {
+					flex-direction: row;
+
+					a {
+						font-size: 12px;
+
+						&:not(:last-child) {
+							margin-bottom: 0;
+						}
+					}
+
+					.sep {
+						display: inline-block;
+					}
+				}
+			}
+		}
+
+		.contact-img {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 50%;
+			height: 100%;
+			object-fit: cover;
+			display: none;
+			
+			@media only screen and (min-width: 1024px) {
+				display: block;
+			}
+		}
+	}
+
+	//Formulário
+	.boxForm {
+		padding: 60px 0;
+
+		@media only screen and (min-width: 1024px) {
+			padding: 120px 0;
+		}
+
+		.mainTit {
+			margin-bottom: 60px;
+			padding: 0;
+		}
+	}
+
+	#formContato {
+		aside {
+			width: 49%;
+			position: relative;
+		}
+
+		.row {padding-bottom: 6px;}
+
+		textarea {
+			padding: 25px;
+			height: 324px;
+		}
+
+		.submit {
+			width: 100%;
+			.titulo(2em);
+		}
+
+		select {background: #FFF url(../img/bg-select2.png) no-repeat 90% 50%;}
+
+		#area,
+		#pais {background: #FFF url(../img/bg-select2.png) no-repeat 95.5% 50%;}
+	}
+
+	///File
+	.inputFile { 
+		width: 100%; 
+		height: 58px;
+		position: relative; 
+		overflow: hidden; 
+		margin-bottom: 10px;
+		cursor: pointer;
+		border-color: @main_color;
+		background: @main_color !important;
+		&:hover {
+			&+.msgHover {.opacity(10);}
+		}
+
+		span { 
+			display: block; 
+			font-size: 100%;
+			color: #fff;
+			text-transform: uppercase;
+		} 
+		
+		input { 
+			position: absolute; 
+			right: 0; 
+			top: 0;
+			cursor: pointer;
+			z-index: 2; 
+			.opacity;
+		}
+	} 
+
+	//Lista de arquivos
+	#listFiles {
+		display: block;
+		clear: both;
+		margin-bottom: 20px;
+
+		li {
+			display: inline-block;
+			position: relative;
+			width: 99%;
+			margin-bottom: 4px;
+			text-align: left;
+			border: 1px solid @main_color;
+		}
+
+		span, a {
+			.texto;
+			line-height: 100%;
+			color: #000;				
+		}
+
+		span {
+			float: left;
+			font-size: 12px;
+			width: 78%;
+			padding: 13px 8px;
+		}
+
+		a {
+			float: right;
+			margin: 8px;
+			padding-top: 3px;
+			font-size: 18px;
+			text-transform: uppercase;
+		}
+	}
+
+	//Mensagem hover files
+	.msgHover {
+		position: absolute;
+		right: -104px;
+		top: -95px;
+		padding: 7px 20px;
+		font-size: 14px;
+		color: #FFF;
+		letter-spacing: -0.03em;
+		line-height: 120%;
+		text-align: center !important;
+		background: @main_color;
+		.transition;
+		.opacity;
+		
+		.seta {
+			position: absolute;
+			bottom: -10px;
+			left: 12px;
+		}
+
+		.seta:before {
+			content: "";
+			display: inline-block;
+			vertical-align: middle;
+			width: 0; 
+			height: 0; 
+
+			border-left: 10px solid transparent;
+			border-right: 10px solid transparent;
+			border-top: 10px solid @main_color;
+		}
+	}
+}
+
+@media only screen and (max-width: 680px) {
+	#contato {
+		#formContato {
+			aside {
+				float: none;
+				display: inline-block;
+				width: 500px;
+				max-width: 100%;
+			}
+
+			.row {padding-bottom: 0;}
+		
+			.column {
+				width: 100% !important;
+				padding-bottom: 6px; 
+			}
+
+			select {background-position: 95% 50% !important;}
+		}
+
+		.msgHover {right: 60%;}
+	}
+}

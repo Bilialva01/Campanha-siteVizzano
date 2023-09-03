@@ -1,0 +1,330 @@
+#blog {
+
+	.main {
+		padding-top: 67px;
+		background: #fff;
+
+		.conteudo {width: 1377px;}
+
+		.titPost, 
+		.lkMore {text-transform: uppercase;}
+
+		.lastPosts,
+		.listPosts {
+			figure,
+			.inside {overflow: hidden;}
+			p {.texto(16px, 130%);}
+		}
+	}
+
+	//Últimas postagens
+	.lastPosts {
+
+		h6 {
+			.texto(14px);
+			color: #808285;
+		}
+
+		.titPost, 
+		.lkMore,
+		p {color: #FFF;}
+
+		.titPost {.texto(40px, 120%);}
+		
+		.lkMore {
+			position: absolute;
+			left: 34px;
+			bottom: 22px;
+			.titulo(15px);
+			text-align: center;
+			width: 310px;
+			max-width: 90%;
+			border: 2px solid #FFF;
+			.transition;
+
+			@media(min-width: 1100px) {
+				&:hover {
+					color: #000;
+					background: #fff;
+				}
+			}
+		}
+	}
+
+	.pagerCycle {
+		position: absolute;
+		left: 25px;
+		bottom: 25px;
+		z-index: 500;
+
+		span {
+			display: inline-block;
+			cursor: pointer;
+			width: 12px;
+			height: 12px;
+			margin-right: 5px;
+			background: #000;
+			font-size: 0;
+			.border_radius;
+			.opacity(.4);
+			&.cycle-pager-active {.opacity(10);}
+		}
+	}
+
+
+	/*
+	 *	Listagem de posts
+	 */
+	.listPosts {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -8px;
+
+		.inside {background: #f3f2f2;}
+		//.txtBox {width: 285px;}
+
+		h6 {
+			.texto(12px);
+			color: #808285;
+		}
+
+		.titPost {.texto(24px, 120%);}
+
+		.titPost, 
+		.lkMore,
+		p {color: #000;}
+
+		.lkMore {
+			position: absolute;
+			bottom: 25px;
+			.titulo(14px);
+			text-align: center;
+			width: 242px;
+			max-width: 80%;
+			background: #e2e1e1;
+			.transition;
+
+			@media(min-width: 1100px) {
+				&:hover {
+					color: #e2e1e1;
+					background: #000;
+				}
+			}
+		}
+
+		//Alinhados a esquerda
+		.post-lt {
+			.txtBox {text-align: left;}
+			.lkMore {left: 27px;}
+		}
+
+		//Alinhados a direita
+		.post-rt {
+			.txtBox {text-align: right;}
+			.lkMore {right: 27px;}
+
+			.txtBox,
+			figure {float: right;}
+		}
+	}
+
+
+	.lkViewMore {
+		.titulo(15px);
+		color: #000;
+		text-transform: uppercase;
+		width: 310px;
+		max-width: 90%;
+		border: 2px solid #000;
+		.transition;
+
+		@media(min-width: 1100px) {
+			&:hover {
+				color: #fff;
+				background: #000;
+			}
+		}
+	}
+
+	/*
+	 *	Footer
+	 */
+	.footerBlog {background: #f3f2f2;}
+
+
+	#formSearchBlog {
+		width: 308px;
+		max-width: 100%;
+
+		input,
+		.submit {
+			.titulo(16px);
+			border: 2px solid #000;
+		}
+
+		#busca {			
+			color: #000;			
+			&.noBg {background: transparent;}
+		}
+
+		.submit {
+			color: #FFF;
+			padding: 0;
+			width: 100%;
+			background: #000;
+			
+			@media(min-width: 1100px) {
+				&:hover {
+					outline-color: #000;
+					.opacity(.7);
+				}
+			}
+		}
+	}
+
+	.listMenusBlog {
+		max-width: 222px;
+
+		a.active {border-bottom: 1px solid #000;}
+
+		@media(min-width: 1100px) {
+			a:hover {text-decoration: underline;}
+		}
+	}		
+
+}
+
+
+/**********************************/
+
+//1024
+@media(max-width: 1100px) {
+	#blog {
+
+		.main {padding-top: 147px;}
+		.boxMainPosts {padding-bottom: 30px;}
+
+		//Últimos
+		.lastPosts {
+			width: 800px;
+			max-width: 100%;
+
+			figure,
+			.txtBox {
+				float: none;
+				display: block;				
+			}
+
+			li,
+			.txtBox,
+			figure,
+			img {
+				height: auto;
+				width: 100%;
+			}
+
+			.txtBox,
+			p {padding-bottom: 40px;}
+
+			.lkMore {
+				position: relative;
+				left: inherit;
+				bottom: inherit;
+			}
+		}
+
+		.pagerCycle {
+			position: relative;
+			left: inherit;
+			bottom: inherit;
+			display: block;
+			padding-top: 20px;
+		}
+
+		//
+		.listPosts .lkMore {bottom: 15px;}
+
+		//
+		.footerBlog {
+			padding-top: 80px;
+
+			#formSearchBlog,
+			.listMenusBlog {
+				float: none;
+			}
+
+			#formSearchBlog {
+				display: block;
+				padding: 0;
+				margin: 0 auto 80px;
+			}
+
+			.listMenusBlog {
+				display: inline-block;
+				vertical-align: top;
+				padding: 0 20px;
+			}
+		}
+	}
+}
+
+//768
+@media(max-width: 800px) {
+	#blog {
+
+		.listPosts {
+			display: block;
+			width: 100%;
+			margin: 0;
+
+			li {width: 100%;}
+		}
+	}
+}
+
+
+//600
+@media(max-width: 680px) {
+	#blog {		
+		.main {padding-top: 67px;}
+
+		.listPosts {
+			li,
+			.inside,
+			.txtBox,
+			figure,
+			img {
+				height: auto;
+				width: 100%;
+			}
+
+			figure,
+			.txtBox {
+				float: none;
+				display: block;				
+			}
+
+			.txtBox,
+			p {padding-bottom: 40px;}
+
+			.txtBox {text-align: center !important;}
+
+			.lkMore {
+				position: relative;
+				display: inline-block;
+				left: inherit !important;
+				right: inherit !important;
+				bottom: inherit;
+			}
+		}
+	
+		//
+		.footerBlog {
+			.listMenusBlog {
+				display: block;
+				margin: 0 auto;
+				padding: 0 0 20px;
+			}
+		}
+	}
+}

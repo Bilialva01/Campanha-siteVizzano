@@ -1,0 +1,284 @@
+#home {
+	background: #ebebeb;
+
+	.banner {margin-top:-2px;}
+
+	//Banner
+	@media(max-width: 1100px) {
+		.banner {height: 570px;}
+	}
+
+	@media(max-width: 680px) {
+		.banner {height: 330px;}
+	}
+
+	@media(max-width: 480px) {
+		.banner {height: 180px;}
+	}
+
+	.boxColecao {
+		display: inline-block;
+		width: 100%;
+		max-width: 95%;
+		padding: 113px 0;
+
+		/*.sideLeft {width: 44%;}
+		.sideTxt {width: 51%;}*/
+
+		.titBox {
+			display: inline-block;
+			max-width: 100%;
+			padding-bottom: 40px;
+			text-align: center;
+			.titulo(6em, 100%);
+			text-transform: uppercase;
+			color: @main_color;
+		}
+
+		p {
+			font-size: 19px;
+			width: 1000px;
+			color: @main_color;
+			.center_h;
+		}
+
+		.lkColecao {
+			display: inline-block;
+			.titulo(2.4em);
+			text-transform: uppercase;
+			color: @txt_color;
+			width: 360px;
+			max-width: 90%;
+			padding: 27px 0;
+			background: @main_color;
+			//outline: 2px solid @txt_color;
+			//outline-offset: -6px;
+			.transition;
+			&.hasHover:hover { background: @txt_color; color: @main_color;}
+		}
+		
+		.sideTxt {
+			padding-top: 44px;
+
+			p {
+				font-size: 1.6em;
+				padding-bottom: 20px;
+			}
+		}
+	}
+
+	//Box Links
+	.boxLinks {
+		display: inline-block;
+		width: 1239px;
+		width: 1377px;
+		max-width: 95%;
+		padding-bottom: 20px;
+		&.hasHover a:hover {
+			img {.opacity(.4);}
+			.caption {
+				color: #FFF;
+				border-color: #FFF;
+				background: none;
+			}
+
+		}
+
+		aside {width: 49.3%;}
+		figure {max-width: 100%;}
+
+		a {
+			position: relative;
+			display: inline-block;
+			width: 100%;
+			overflow: hidden;
+			margin-bottom: 20px;
+		}
+
+		img,
+		.caption {.transition;}
+
+		.caption {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: @main_color;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			.translate(-50%, -50%);
+			width: 333px;
+			height: 80px;
+			border: 2px solid transparent;
+			background: url(../img/overlay2.png) repeat;
+			
+			span {
+				.titulo(2.4em);
+				text-transform: uppercase;
+			}
+
+			&.icon {width:80px;}
+		}
+	}
+
+	//Newsletter
+	.boxNews {
+		width: 540px;
+		max-width: 100%;
+		height: 360px;
+		text-align: center;
+		background: #f1f2f2;
+		
+		.titBox {
+			display: inline-block;
+			padding: 52px 0 30px;
+			color: @main_color;
+			.titulo(3.1em);
+		}
+	}
+
+	#formNews {
+		display: inline-block;
+		width: 70%;
+
+		#nome,
+		#email {
+			width: 100%;
+			height: 59px;
+			margin-bottom: 11px;
+			padding: 0 24px;
+			.texto;
+		}
+
+		.submit {
+			display: inline-block;
+			height: 59px;
+			.titulo;
+			color: @txt_color;
+			width: 238px;
+			border-color: @main_color;
+			background: @main_color;
+			outline: 1px solid @main_color;
+			outline-offset: -6px;
+			&:hover {outline-color: @txt_color;}
+		}
+	}
+
+	//Box instagram
+	.boxInstagram {
+		padding: 105px 0;
+		background: #FFF;
+
+		.tit {display: inline-block;}
+
+		.userInsta {
+			display: block;
+			.titulo(2.4em);
+			color: #58595b;
+		}
+
+		.sociais {
+			display: block;
+			padding: 0;
+			&.hasHover a:hover {
+				.opacity(.7);
+			}
+
+			a {
+				vertical-align: top;				
+				color: @main_color;
+				margin: 0 50px;
+			}
+		}
+
+	}
+
+	#instafeed {
+		display: inline-block;
+		width: 1180px;
+		max-width: 95%;
+		padding: 35px 0 130px;
+		&.hasHover a:hover {
+			img {.opacity(.4);}
+			.mouseIn {.opacity(10);}
+		}
+
+		.item {
+			float: left;
+			width: 302px;
+			height: 302px;
+
+			&:nth-child(1),
+			&:nth-child(3) {margin: 35px -14px 0 0;}
+		}
+
+		a {
+			position: relative;
+			display: block;
+			width: 100%;
+			height: 100%;
+			background: @main_color;
+		}
+
+		img {
+			display: block;
+			min-width: 100%;
+			min-height: 100%;
+			max-width: 100%;
+			max-height: 100%;
+		}
+
+		img,
+		.mouseIn {.transition;}
+
+		.mouseIn {
+			position: absolute;
+			top: 24px;
+			left: 24px;
+			right: 24px;
+			bottom: 24px;
+			border: 3px solid #FFF;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			.opacity;
+
+			span {
+				.titulo(2.4em);
+				color: #FFF;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+
+	//Slick
+	#instafeed.slick-slider {
+		width: 500px;
+		padding-bottom: 50px;
+
+		.item {
+			width: 100%;
+			height: 300px;
+			margin: 0 10px;
+		}
+
+		a {background: none;}
+
+		img {
+			display: inline-block;
+			height: 100%;
+			width: auto;
+			min-width: auto;
+			max-width: auto;
+			max-height: auto;
+			min-height: auto;
+		}
+		
+		.slick-prev,
+		.slick-next {display: none !important;}
+
+		.slick-dots li button {border-color: @main_color;}
+		.slick-dots li.slick-active button {background: @main_color !important;}
+	}
+}
